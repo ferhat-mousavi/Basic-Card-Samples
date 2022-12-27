@@ -1,4 +1,5 @@
 # Basic-Card-Prepaid-Card
-Sample prepaid card written with BASIC for Basic Card.
 
-This card was used on RadarLive Music Festival.
+Example prepaid card written in BASIC for Basic Card.
+
+This card was used at the 2007 RadarLive Music Festival.
