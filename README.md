@@ -1,4 +1,4 @@
-# Basic-Card-Prepaid-Card
+# Basic-Card-Samples
 
 Example prepaid card written in BASIC for Basic Card.
 
