@@ -1,0 +1,29 @@
+'********************************************************************************
+'********************************************************************************
+
+Option Explicit
+Option Base Explicit
+
+'********************************************************************************
+'********************************************************************************
+
+Declare Command &H20 &H01 SetLMK (LMKHex As String*16)
+Declare Command &H20 &H06 CheckLMK (CheckValue As String*8)
+Declare Command &H20 &H11 EncryptData3(EncDec As String*8, KeyUnderLMK As String*16)
+Declare Command &H20 &H12 EncryptData1(EncDec As String*8, KeyUnderLMK As String*16)
+Declare Command &H20 &H13 EncryptData0(EncDec As String*8, KeyUnderLMK As String*16)
+Declare Command &H20 &H21 SetCommKey(EncCommKey As String*19)
+Declare Command &H20 &H51 SetInternalKey(IntKey As String*16)
+Declare Command &H20 &H52 CheckInternalKey(CheckValue As String*8)
+Declare Command &H20 &H54 VerifyInternalData(DecData As String*8, EncData As String*8)
+
+
+Const swLoadedAlready     = &H6B00
+Const swInvalidKeyLen     = &H6B01
+Const swKeysMissing       = &H6B02
+Const swEncDecDataLen     = &H6B03
+Const swInternalKeyErr    = &H6B04
+Const swCommKeyMissing    = &H6B05
+Const swInvCheckValue     = &H6B09
+
+Const InitialCommKey      = "T2O0T0V7_3R1S0F7"
