@@ -1,0 +1,21 @@
+Option Explicit
+Option Base Explicit
+
+Declare Command &H10 &H10 Format()
+Declare Command &H20 &H10 Reset()
+
+Declare Command &H30 &H10 ExternalAuth(Challenge As String*8, AccessKey As String*8)
+Declare Command &H30 &H20 SetPAN(CardNo As String*16)
+Declare Command &H30 &H30 UpdateCardData(Balance As String*8, SeqNo As String*4, ActiveFl As String*1, GiftGiven As String*1, DateTime As String*10, LAwardType As String*1, LCardNo As String*4, LTermID As String*8, LDateTime As String*10)
+Declare Command &H30 &H40 ReadCardData(CardNo As String*16, Balance As String*8, SeqNo As String*4, ActiveFl As String*1, GiftGiven As String*1, DateTime As String*10, LAwardType As String*1, LCardNo As String*4, LTermID As String*8, LDateTime As String*10)
+Declare Command &H30 &H50 InsertHistory( ItemNo As Byte, TransTermID As String*8, TransMerchantName As String*10, TransDateTime As String*10, TransAmount As String*8, TransSeqNo As String*4, TransTXType As String*1)
+Declare Command &H30 &H60 ReadHistory( ItemNo As Byte, TransTermID As String*8, TransMerchantName As String*10, TransDateTime As String*10, TransAmount As String*8, TransSeqNo As String*4, TransTXType As String*1)
+
+Const swNotAuthorised     = &H6B10
+Const swCardNoExists      = &H6B12
+Const swCardNoMissing     = &H6B13
+Const swParamError        = &H6B14
+
+Const InitialKey          = "VSRADARLIVE_0706"
+Const A1KEY               = "2007FIRSTAKEYFED"
+Const A2KEY               = "2007SECONDAKEYFE"
